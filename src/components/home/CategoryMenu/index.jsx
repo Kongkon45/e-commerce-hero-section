@@ -4,7 +4,7 @@ import CategoryItem from "../CategoryItem";
 const CategoryMenu = ({ categories }) => {
   return (
     <div className="w-full p-4">
-      <ul className="space-y-2">
+      <ul className="space-y-0">
         {categories?.map((category) => (
           <CategoryItem key={category?.id} category={category} />
         ))}
