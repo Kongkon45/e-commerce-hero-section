@@ -16,22 +16,48 @@
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background-color: #ffffff;
+  overflow-x: hidden !important;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
-  @apply px-5 md:px-[80px] lg:px-[100px] xl:px-[120px] 2xl:px-[150px]  mx-auto;
+  @apply px-6 md:px-8 lg:px-24 xl:px-28 2xl:px-32 mx-auto;
 }
 
 
-/* Tailwind CSS for smooth transitions */
-.group-hover\:block {
-  transition: max-height 0.3s ease-in-out;
-  max-height: 0;
+
+/* Big screen size Media Query */
+@media screen and (min-width: 1400px) {
+  .custom-container {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
-.group:hover > .group-hover\:block {
-  max-height: 1000px; /* Or the height of the list */
+@media screen and (min-width: 1600px) {
+  .custom-container {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
+@media screen and (min-width: 1921px) {
+  .custom-container {
+    width: 1920px;
+    margin: 0 auto;
+  }
+}
+
+.swiper-pagination-bullet {
+  background-color: #eff1f0 !important;
+  opacity: 1 !important;
+  width: 15px !important;
+  height: 15px !important;
+}
+
+/* Active pagination bullet color */
+.swiper-pagination-bullet-active {
+  background-color: #f97316 !important;
+}
+
 
 
