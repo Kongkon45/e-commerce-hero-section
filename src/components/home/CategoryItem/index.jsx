@@ -16,7 +16,7 @@ const CategoryItem = ({ category }) => {
     >
       {/* Main Category */}
       <div className="flex justify-between items-center cursor-pointer p-2 rounded hover:bg-gray-100">
-        <span className="text-gray-800 font-medium">{category.title}</span>
+        <span className="text-gray-800 font-medium hover:text-primary">{category.title}</span>
         {category?.childrens && (
           <div className="text-gray-500">
             {isHovered ? <AiOutlineDown /> : <AiOutlineRight />}
@@ -28,7 +28,7 @@ const CategoryItem = ({ category }) => {
       <div className="">
       {isHovered && category?.childrens && (
         <ul className=" absolute left-full top-0 mt-0 ml-1 bg-white shadow-lg border rounded-lg w-full">
-          {category.childrens.map((child) => (
+          {category?.childrens?.map((child) => (
             <CategoryItem key={child.id} category={child} />
           ))}
         </ul>
